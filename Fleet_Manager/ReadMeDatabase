@@ -1,0 +1,32 @@
+//Tietokanta
+
+CREATE TABLE [dbo].[AutoTable] (
+    [Id]              INT          IDENTITY (1, 1) NOT NULL,
+    [merkki]          VARCHAR (50) NULL,
+    [malli]           VARCHAR (50) NULL,
+    [rekisterinumero] NCHAR (10)   NULL,
+    [vuosimalli]      INT          NULL,
+    [katsastuspvm]    DATETIME     NULL,
+    [koko]            FLOAT (53)   NULL,
+    [teho]            FLOAT (53)   NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+
+//Testidata scripti
+
+SET IDENTITY_INSERT [dbo].[AutoTable] ON
+INSERT INTO [dbo].[AutoTable] ([Id], [merkki], [malli], [rekisterinumero], [vuosimalli], [katsastuspvm], [koko], [teho]) VALUES (15, N'Peugeot', N'Farmari', N'121-hhh   ', 1992, N'1970-01-01 00:00:01', 123, 222)
+INSERT INTO [dbo].[AutoTable] ([Id], [merkki], [malli], [rekisterinumero], [vuosimalli], [katsastuspvm], [koko], [teho]) VALUES (16, N'Lada', N'Pönttö', N'120-dds   ', 1998, N'1970-01-01 00:00:01', 222, 112)
+INSERT INTO [dbo].[AutoTable] ([Id], [merkki], [malli], [rekisterinumero], [vuosimalli], [katsastuspvm], [koko], [teho]) VALUES (17, N'Ferrari', N'Urheilu', N'241-asq   ', 2003, N'1900-01-01 00:00:00', 222, 222)
+INSERT INTO [dbo].[AutoTable] ([Id], [merkki], [malli], [rekisterinumero], [vuosimalli], [katsastuspvm], [koko], [teho]) VALUES (18, N'Audi', N'A4', N'khg-272   ', 2009, N'1970-01-01 00:00:01', 34, 22)
+INSERT INTO [dbo].[AutoTable] ([Id], [merkki], [malli], [rekisterinumero], [vuosimalli], [katsastuspvm], [koko], [teho]) VALUES (19, N'Volkkari', N'Asuntoauta', N'klk-456   ', 1999, N'1970-01-01 00:00:01', 233, 55)
+INSERT INTO [dbo].[AutoTable] ([Id], [merkki], [malli], [rekisterinumero], [vuosimalli], [katsastuspvm], [koko], [teho]) VALUES (20, N'Ferrari', N'Urheilu', N'tyy-128   ', 1993, N'1900-01-01 00:00:00', 222, 222)
+INSERT INTO [dbo].[AutoTable] ([Id], [merkki], [malli], [rekisterinumero], [vuosimalli], [katsastuspvm], [koko], [teho]) VALUES (24, N'Mersu', N'M6', N'ggh-221   ', 2012, N'1970-01-01 00:00:01', 222, 222)
+INSERT INTO [dbo].[AutoTable] ([Id], [merkki], [malli], [rekisterinumero], [vuosimalli], [katsastuspvm], [koko], [teho]) VALUES (26, N'Volvo', N'Farmari', N'asd-123   ', 1988, N'1900-01-01 00:00:00', 0, 0)
+INSERT INTO [dbo].[AutoTable] ([Id], [merkki], [malli], [rekisterinumero], [vuosimalli], [katsastuspvm], [koko], [teho]) VALUES (28, N'Audi', N'A8', N'sdd-434   ', 2017, N'1900-01-01 00:00:00', 544, 444)
+SET IDENTITY_INSERT [dbo].[AutoTable] OFF
+
+
+
