@@ -20,3 +20,6 @@ kirjoittamalla "Rekisterinumero"-kenttään haluamansa rekisterinumeron ja  pain
 Auton poistaminen:
 Käyttäjä voi poistaa haluamansa auton tietokannasta syöttämälä poistettavan auton ID:n "Syötä ID"-kenttään ja painamalla poista näppäintä.
 
+Jos tietokanta filet eivät toimi, lisään projektin sisälle toisen ReadMe-filen. Toisesta ReadMe-filestä löytyy raakaversio scriptistä sekä
+testit datat.
+
