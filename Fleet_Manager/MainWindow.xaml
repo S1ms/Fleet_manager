@@ -1,0 +1,52 @@
+﻿<Window x:Class="Fleet_Manager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Fleet_Manager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="321*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="AddButton" Content="Lisää tiedot" HorizontalAlignment="Left" Margin="176,150,0,0" VerticalAlignment="Top" Width="90" Grid.Row="1" Height="27" Click="AddButton_Click"/>
+        <TextBox x:Name="MerkkiBox" HorizontalAlignment="Left" Height="23" Margin="27,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>
+        <TextBox x:Name="RekisteriBox" HorizontalAlignment="Left" Height="23" Margin="26,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="KatsastusBox" HorizontalAlignment="Left" Height="23" Margin="24,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="VuosimalliBox" HorizontalAlignment="Left" Height="23" Margin="162,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="KokoBox" HorizontalAlignment="Left" Height="23" Margin="163,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <TextBox x:Name="MalliBox" HorizontalAlignment="Left" Height="23" Margin="164,91,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.RowSpan="2"/>
+        <Label x:Name="label" Content="Merkki" HorizontalAlignment="Left" Margin="60,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.255,0.219" Height="26" Width="46"/>
+        <Label x:Name="label1" Content="Malli" HorizontalAlignment="Left" Margin="206,59,0,0" VerticalAlignment="Top" Height="26" Width="36"/>
+        <Label x:Name="label2" Content="Rekisterinumero" HorizontalAlignment="Left" Margin="32,23,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="96"/>
+        <Label x:Name="label3" Content="Katsastuspäivämäärä" HorizontalAlignment="Left" Margin="23,77,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="120"/>
+        <Label x:Name="label4" Content="Moottorin koko" HorizontalAlignment="Left" Margin="170,79,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="93"/>
+        <TextBox x:Name="TehoBox" HorizontalAlignment="Left" Height="23" Margin="23,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        <Label x:Name="label5" Content="Moottorin Teho" HorizontalAlignment="Left" Margin="34,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.073,0.414" Grid.Row="1" Height="26" Width="92"/>
+        <Label x:Name="label6" Content="Vuosimalli" HorizontalAlignment="Left" Margin="191,19,0,0" VerticalAlignment="Top" Grid.Row="1" Height="26" Width="64" RenderTransformOrigin="-0.5,0.308"/>
+        <Button x:Name="MuokkaaButton" Content="Muokkaa" HorizontalAlignment="Left" Margin="63,213,0,0" Grid.Row="1" VerticalAlignment="Top" Width="84" Height="27" Click="MuokkaaButton_Click"/>
+        <Button x:Name="HaeButton" Content="Hae" HorizontalAlignment="Left" Margin="363,60,0,0" Grid.Row="1" VerticalAlignment="Top" Width="85" Height="26" Click="HaeButton_Click"/>
+        <ListView x:Name="listViewInfo" HorizontalAlignment="Left" Height="167" Margin="353,136,0,0" Grid.Row="1" VerticalAlignment="Top" Width="410">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="ButtonPoista" Content="Poista" HorizontalAlignment="Left" Margin="673,40,0,0" VerticalAlignment="Top" Width="96" Height="38" Click="ButtonPoista_Click"/>
+        <TextBox x:Name="textBoxPoista" HorizontalAlignment="Left" Height="23" Margin="591,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="73" Text="Syötä ID"/>
+        <CheckBox x:Name="checkBoxMuokkaus" Content="Muokkaus tila" HorizontalAlignment="Left" Margin="56,256,0,0" Grid.Row="1" VerticalAlignment="Top" Checked="CheckBoxMuokkaus_Checked" Unchecked="CheckBoxMuokkaus_Unchecked"/>
+        <TextBox x:Name="textBoxId" HorizontalAlignment="Left" Height="23" Margin="25,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Visibility="Hidden"/>
+        <Label x:Name="Label_Id" Content="ID" HorizontalAlignment="Left" Margin="31,1,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
+        <RadioButton x:Name="radioButtonVanhin" Content="Vanhin" HorizontalAlignment="Left" Margin="561,100,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="buttons"/>
+        <RadioButton x:Name="radioButtonUusin" Content="Uusin" HorizontalAlignment="Left" Margin="659,100,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="buttons"/>
+        <RadioButton x:Name="radioButtonMalli" Content="Malli" HorizontalAlignment="Left" Margin="459,100,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="buttons"/>
+        <RadioButton x:Name="radioButtonMerkki" Content="Merkki" HorizontalAlignment="Left" Margin="361,100,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="buttons"/>
+        <RadioButton x:Name="radioButtonKaikki" Content="Kaikki" HorizontalAlignment="Left" Margin="486,66,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="buttons2"/>
+        <RadioButton x:Name="radioButtonSolo" Content="Haku rekisterinumerolla" HorizontalAlignment="Left" Margin="568,66,0,0" Grid.Row="1" VerticalAlignment="Top" GroupName="buttons2"/>
+
+
+    </Grid>
+</Window>
