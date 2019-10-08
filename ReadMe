@@ -1,0 +1,22 @@
+Sovellus luotu Visual Studiolla käyttäen C# sekä tietokantakutsut SQL:llä.
+
+Ohjeet sovelluksen käyttöön:
+
+Auton lisäys: 
+Käyttäjä voi lisätä auton tietokantaan täyttämällä tiedot ja painamalla "Lisää  tiedot".
+
+Auton muokkaus:
+Käyttäjä voi muokata jo tietokannassa valmiiksi olevaa autoa laittamalla ensiksi muokkaustilan päälle Checkboxista.
+Tämän jälkeen ID-kenttä ilmestyy jonka mukaan käyttäjä voi muokata autoja. Eli täytetään ID-kenttään haluamansa auto
+ja täytetään muokkausta vaativat arvot textboxeihin, jonka jälkeen painetaan Muokkaa-painiketta.
+
+Auton hakeminen ja rajaus:
+Käyttäjä voi hakea autoja rajaamalla niitä merkin,mallin tai vuosimallin mukaan. "Kaikki"-radiobutton valitsee kannasta
+kaikki autot rajaamatta hakua mitenkään. Jos esim. halutaan hakea kaikista uusin auto, valitaan "Kaikki" sekä "Uusin".
+Jos taas kaikista merkin mukaan rajattuna niin "Kaikki" sekä "Merkki". Valittuaan rajausehdot  painetaan "Hae"-näppäintä.
+Käyttäjä voi myös hakea yksittäistä autoa rekisterinumeron perusteella valitsemalla "Haku rekisterinumerolla", jonka jälkeen
+kirjoittamalla "Rekisterinumero"-kenttään haluamansa rekisterinumeron ja  painamalla "Hae"-näppäintä.
+
+Auton poistaminen:
+Käyttäjä voi poistaa haluamansa auton tietokannasta syöttämälä poistettavan auton ID:n "Syötä ID"-kenttään ja painamalla poista näppäintä.
+
